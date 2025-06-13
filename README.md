@@ -31,11 +31,13 @@ Checking the data and data type in Tableau Desktop:
 ![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_result_Tableau_Beginner.png)
 All Hyper output files can be read in Tableau Desktop. All data types are correct. On the left image, the schema of the OrderList table is set to public by default by Pantab (599 rows in the table). On the right image, the schema of the OrderList table is Extract written by HyperAPI (599 rows in the table).
 
-**Beginner Bonus Challenge**
+### Beginner Bonus Challenge
 - Handle multiple Excel sheets 
 - Create a command-line tool for easy use 
-- Add proper error handling 
+- Add proper error handling
+
 For the Beginner Bonus Challenge, I did 3 bullet points above. To optimize the big dataset, I think of splitting the dataset into small chunks then write the first chunk into the hyper file and append the rest into the same hyper file. Another idea is creating the timestamp when storing the data in the data warehouse and write to the hyper file by the timestamp.
+
 To update existing Hyper file instead of starting from scratch, it's related to the big dataset I mentioned above. I will write a separate program to do that.
 
 ![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/DDQ_202505_Beginner_Bonus.png)
@@ -51,7 +53,32 @@ Import the hyper file written by Pantab, Tableau Desktop can load both tables (C
 
 Import the hyper file written by Hyper API, Tableau Desktop can load both tables. The schema here is "Extract". All data types loaded from this hyper file are correct.
 
+### Intermediate Challenge
+**Solution Expectations:**
+- Successfully create Hyper files containing both tables using both methods
+- Run SQL queries against both tables and save filtered results
+- Include timing information for performance comparison
+- Handle different data types appropriately in both approaches
+- Follow good practices for resource management (closing connections, etc.)
+
+**Output:**
 **Intermediate Output**
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/DDQ_202505_Intermediate.png)
+
+It was successfully write both tables into a hyper file and applied the SQL query to filter the data and write back to the same hyper file. The Tableau Hyper API was running faster than Pantab.
+Check the hyper file with Tableau Desktop:
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_result_Tableau_Intermediate_pantab.png)
+
+Import the hyper file written by Pantab, Tableau Desktop loaded both tables from the hyper file. All data values are correct after filtering data. The data type of all columns is also correct.
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_result_Tableau_Intermediate_HyperAPI.png)
+
+Same as the result from Pantab. Tableau Desktop is also able to load the hyper file written by Hyper API. All filtered data in both tables are correct. The data types of all fields are correct.
+
+### Intermediate Bonus Challenge
+
 ### Resources:
 Pantab Documentation: https://pantab.readthedocs.io/en/latest/
 Tableau Hyper API Documentation: https://tableau.github.io/hyper-db/docs/
