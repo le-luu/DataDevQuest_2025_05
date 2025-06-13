@@ -78,7 +78,59 @@ Import the hyper file written by Pantab, Tableau Desktop loaded both tables from
 Same as the result from Pantab. Tableau Desktop is also able to load the hyper file written by Hyper API. All filtered data in both tables are correct. The data types of all fields are correct.
 
 ### Intermediate Bonus Challenge
+In the Intermediate Bonus Challenge, I did:
+- Add a join or union query that combines data from both tables
+- Implement aggregate queries (COUNT, SUM, AVG) against your data
+- Create a simple command-line tool that allows users to specify their own SQL filters
 
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/DDQ_202505_Intermediate_Bonus.png)
+
+I applied both 2 methods to write the data from 2 tables into a hyper file. Then, I applied the same SQL query to join both tables together and used aggregate function (SUM, AVG) in both methods. However, Pantab returns 2 rows of data, while Hyper API returns 9 rows. I also measured the running time. Tableau Hyper API was running faster than Pantab a half second. 
+
+Then, I wrote a function to let the user enter their own custom SQL query. The user can select the method they want to try the SQL Query. For Pantab, doesn't need to type the schema name. For Tableau Hyper API, need to add the schema name with the table name. Both methods returns the same result.
+
+### Instructions
+### Instructions
+- You need to install Python in your local computer or following the instructions from the DataDevQuest Challenge in Postman
+- Fork the repository and clone it to your local computer
+- Open the Command Prompt (for Windows) and Terminal (for Mac), change the directory to the DataDevQuest_2025_05
+    ```
+    cd DataDevQuest_2025_05
+    ```
+- Install and activate the virtual environment
+    ```
+    pip install virtualenv
+    virtualenv venv
+    venv\Scripts\activate
+    ```    
+- Install the packages in the Command Prompt
+    ```
+    pip install -r requirements.txt
+    ```
+    It may takes a few seconds to install all packages:
+    - pandas
+    - pantab
+    - tableauhyperapi
+    - pathlib
+- The solution of the Beginner challenge is in DDQ_2025_05_Beginner folder (contains config.py, Le_DDQ_2025_05_Beginner_Solution.py, and Le_DDQ_2025_05_Beginner_Solution_Bonus_Challenge.py)
+- The solution of the Intermediate challenge is in DDQ_2025_05_Intermediate folder (contains config, Le_DDQ_2025_05_Intermediate_Solution.py, and Le_DDQ_2025_05_Intermediate_Solution_Bonus_Challenge.py)
+- Open the config.py (in both 2 folders) by any Python IDE or your Text Editor to change the directory (Parent Path) where you cloned this project and save it.
+- Run this script for the Beginner Challenge:
+    ```
+    python Le_DDQ_2025_05_Beginner_Solution.py
+    ```
+- Run this script for the Beginner Bonus Challenge
+    ```
+    python Le_DDQ_2025_05_Beginner_Solution_Bonus_Challenge.py
+    ```
+- Run this script for the Intermediate Challenge:
+    ```
+    python Le_DDQ_2025_05_Intermediate_Solution.py
+    ```
+- Run this script for the Intermediate Bonus Challenge:
+    ```
+    python Le_DDQ_2025_05_Intermediate_Solution_Bonus_Challenge.py
+    ```
 ### Resources:
 Pantab Documentation: https://pantab.readthedocs.io/en/latest/
 Tableau Hyper API Documentation: https://tableau.github.io/hyper-db/docs/
