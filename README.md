@@ -24,13 +24,34 @@ Link to the Beginner Challenge: https://datadevquest.com/ddq2025-05-convert-exce
 - Handle different data types appropriately
 
 **Output:**
-**Beginner Solution**
+**Beginner Output**
 ![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/DDQ_202505_Beginner.png)
 To write an Excel to Hyper file with 599 Rows, Tableau Hyper API was running faster than Pantab 0.37 seconds (from the image above).
 Checking the data and data type in Tableau Desktop:
 ![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_result_Tableau_Beginner.png)
 All Hyper output files can be read in Tableau Desktop. All data types are correct. On the left image, the schema of the OrderList table is set to public by default by Pantab (599 rows in the table). On the right image, the schema of the OrderList table is Extract written by HyperAPI (599 rows in the table).
 
+**Beginner Bonus Challenge**
+- Handle multiple Excel sheets 
+- Create a command-line tool for easy use 
+- Add proper error handling 
+For the Beginner Bonus Challenge, I did 3 bullet points above. To optimize the big dataset, I think of splitting the dataset into small chunks then write the first chunk into the hyper file and append the rest into the same hyper file. Another idea is creating the timestamp when storing the data in the data warehouse and write to the hyper file by the timestamp.
+To update existing Hyper file instead of starting from scratch, it's related to the big dataset I mentioned above. I will write a separate program to do that.
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/DDQ_202505_Beginner_Bonus.png)
+
+This is the output result from handling multiple sheets by using Pantab and Hyper API. For Pantab, I also wrote the first sheet into the hyper file and append the second sheet to the same hyper file. From the output result, Tableau Hyper API was running faster than Pantab.
+Check the hyper file with Tableau Desktop:
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_Result_Tableau_Beginner_Bonus_Pantab.png)
+
+Import the hyper file written by Pantab, Tableau Desktop can load both tables (Customer and OrderList). By default, the schema is public. All data types from this hyper file are correct.
+
+![image](https://github.com/le-luu/DataDevQuest_2025_05/blob/main/img/Test_result_Tableau_Beginner_Bonus.png)
+
+Import the hyper file written by Hyper API, Tableau Desktop can load both tables. The schema here is "Extract". All data types loaded from this hyper file are correct.
+
+**Intermediate Output**
 ### Resources:
 Pantab Documentation: https://pantab.readthedocs.io/en/latest/
 Tableau Hyper API Documentation: https://tableau.github.io/hyper-db/docs/
