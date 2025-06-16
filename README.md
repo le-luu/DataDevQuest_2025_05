@@ -54,6 +54,7 @@ Import the hyper file written by Pantab, Tableau Desktop can load both tables (C
 Import the hyper file written by Hyper API, Tableau Desktop can load both tables. The schema here is "Extract". All data types loaded from this hyper file are correct.
 
 ### Intermediate Challenge
+Link to the challenge: https://datadevquest.com/ddq2025-05-multi-source-excel-data-to-tableau-hyper-with-sql-queries-intermediate/
 **Solution Expectations:**
 - Successfully create Hyper files containing both tables using both methods
 - Run SQL queries against both tables and save filtered results
@@ -133,5 +134,7 @@ Then, I wrote a function to let the user enter their own custom SQL query. The u
     ```
 ### Resources:
 Pantab Documentation: https://pantab.readthedocs.io/en/latest/
+
 Tableau Hyper API Documentation: https://tableau.github.io/hyper-db/docs/
+
 Tableau Hyper API Samples Github: https://github.com/tableau/hyper-api-samples/tree/main
