@@ -12,7 +12,7 @@ Nik Dutra
 - Test your own SQL query from both methods.
 
 ### Solution Video
-
+[![DDQ_2025_05](https://www.youtube.com/watch?v=1PEVyZSdF_o/0.jpg)](https://www.youtube.com/watch?v=1PEVyZSdF_o)
 
 ### Beginner Challenge
 Link to the Beginner Challenge: https://datadevquest.com/ddq2025-05-convert-excel-to-tableau-hyper-files-beginner/
